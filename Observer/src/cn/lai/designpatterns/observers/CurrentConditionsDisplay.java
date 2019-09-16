@@ -3,11 +3,11 @@ package cn.lai.designpatterns.observers;
 /**
  * 显示当前数值
  */
-public class CurrentConditionsDisplay implements DisplayElement, Observer{
+public class CurrentConditionsDisplay implements DisplayElement, Observer {
     private float temperature;
     private float humidity;
     private Subject weatherData;
-   
+
     CurrentConditionsDisplay(Subject s) {
         this.weatherData = s;
         this.weatherData.registerObserver(this);
@@ -19,7 +19,7 @@ public class CurrentConditionsDisplay implements DisplayElement, Observer{
     }
 
     @Override
-    public void update(float temperature, float humidity,float pressure) {
+    public void update(float temperature, float humidity, float pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.display();
