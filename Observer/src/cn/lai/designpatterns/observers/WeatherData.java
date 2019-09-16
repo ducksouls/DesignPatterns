@@ -1,15 +1,27 @@
 package cn.lai.designpatterns.observers;
 
+import java.util.ArrayList;
+
 public class WeatherData implements Subject {
-    @Override
-    public void registerObserver() {
 
+    private ArrayList<Observer> observers;
+    private float temperature;
+    private float humidity;
+    private float pressure;
+
+    public WeatherData() {
+        //存放观察者的列表
+        this.observers = new ArrayList<Observer>();
     }
 
     @Override
-    public void removeObserver() {
-
+    public void registerObserver(Observer o) {
+        this.observers.add(o);
     }
+
+    @Override
+    public void removeObserver(Observer o) { this.observers.remove(o); }
+
 
     @Override
     public void notifyObserver() {
@@ -30,5 +42,12 @@ public class WeatherData implements Subject {
 
     public void measurementsChanged() {
 
+    }
+
+    public void setMeasurements(float temperature, float humidity, float pressure) {
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        measurementsChanged();
     }
 }
