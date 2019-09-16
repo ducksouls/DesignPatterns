@@ -6,11 +6,11 @@ package cn.lai.designpatterns.observers;
 public class StatisticsDisplay implements DisplayElement, Observer {
     @Override
     public void display() {
-
+        
     }
 
     @Override
-    public void update() {
+    public void update(float temperature, float humidity,float pressure) {
 
     }
 }
