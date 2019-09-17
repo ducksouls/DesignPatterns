@@ -10,6 +10,11 @@ public class PizzaStore {
     public void orderPizza(String type) {
         Pizza pizza = null;
         pizza = SimplePizzaFactory.createPizza(type);
+    }
 
+    public static void main(String args[]) {
+        PizzaStore pizzaStore = new PizzaStore();
+        pizzaStore.orderPizza("cheese");
+        pizzaStore.orderPizza("peperoni");
     }
 }
