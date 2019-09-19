@@ -3,13 +3,14 @@ package cn.lai.designpatterns.command.remote;
 import cn.lai.designpatterns.command.Command;
 
 /**
- * invoker
+ * 撤销命令
  */
-public class RemoteControl {
+public class RemoteControlWithUndo {
     Command[] onCommand;
     Command[] offCommand;
+    Command undoCommand;
 
-    RemoteControl() {
+    RemoteControlWithUndo() {
         onCommand = new Command[7];
         offCommand = new Command[7];
         Command noCommand = new NoCommand();
@@ -17,7 +18,7 @@ public class RemoteControl {
             onCommand[i] = noCommand;
             offCommand[i] = noCommand;
         }
-
+        undoCommand = noCommand;
     }
 
     void setCommand(int slot, Command onCommand, Command offCommand) {
@@ -27,9 +28,15 @@ public class RemoteControl {
 
     void onPressed(int slot) {
         this.onCommand[slot].execute();
+        undoCommand = this.offCommand[slot];
     }
 
     void offPressed(int slot) {
         this.offCommand[slot].execute();
+        undoCommand = this.onCommand[slot];
+    }
+
+    void undoPressed() {
+        undoCommand.execute();
     }
 }

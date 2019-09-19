@@ -1,11 +1,11 @@
-package Command.src.cn.lai.designpatterns.command;
+package cn.lai.designpatterns.command;
 
 /**
- * concreteCommand 
+ * concreteCommand
  */
 public class LightOnCommand implements Command {
     Light light;
-    
+
     public LightOnCommand(Light light) {
         this.light = light;
     }
@@ -14,5 +14,10 @@ public class LightOnCommand implements Command {
     public void execute() {
         light.on();
     }
-    
+
+    @Override
+    public void undo() {
+        light.off();
+    }
+
 }

@@ -1,4 +1,4 @@
-package Command.src.cn.lai.designpatterns.command;
+package cn.lai.designpatterns.command;
 public class Test {
 
     /**

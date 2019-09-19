@@ -1,4 +1,4 @@
-package Command.src.cn.lai.designpatterns.command;
+package cn.lai.designpatterns.command;
 
 
 /**
@@ -9,4 +9,5 @@ package Command.src.cn.lai.designpatterns.command;
  */
 public interface Command {
     void execute();
+    void undo();
 }

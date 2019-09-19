@@ -1,4 +1,4 @@
-package Command.src.cn.lai.designpatterns.command;
+package cn.lai.designpatterns.command;
 
 /**
  * concreteCommand 
@@ -15,6 +15,10 @@ public class GarageDoorOpenCommand implements Command {
         door.open();
     }
 
+    @Override
+    public void undo() {
+
+    }
 
 
 }

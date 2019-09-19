@@ -1,4 +1,6 @@
-package Command.src.cn.lai.designpatterns.command;
+package cn.lai.designpatterns.command;
+
+import cn.lai.designpatterns.command.Command;
 
 /**
  * invoker   
