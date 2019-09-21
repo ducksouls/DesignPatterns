@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - RemoteLoader",
+            "request": "launch",
+            "mainClass": "Command.src.cn.lai.designpatterns.command.remote.RemoteLoader",
+            "projectName": "DesignPatterns_43e1a16d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Command.src.cn.lai.designpatterns.command.Test",
+            "projectName": "DesignPatterns_43e1a16d"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "DesignPatterns_43e1a16d"
+        }
+    ]
+}

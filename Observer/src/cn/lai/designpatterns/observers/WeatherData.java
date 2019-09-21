@@ -11,7 +11,7 @@ public class WeatherData implements Subject {
 
     public WeatherData() {
         //存放观察者的列表
-        this.observers = new ArrayList<Observer>();
+        this.observers = new ArrayList<>();
     }
 
     @Override
@@ -20,14 +20,16 @@ public class WeatherData implements Subject {
     }
 
     @Override
-    public void removeObserver(Observer o) { this.observers.remove(o); }
+    public void removeObserver(Observer o) {
+        this.observers.remove(o);
+    }
 
 
     @Override
     public void notifyObserver() {
-        for ( int i =  0; i < this.observers.size() - 1; i ++ ) {
-            Observer o = observers.get(i)
-            o.update(this.temperature,this.humidity,this.pressure)
+        for (int i = 0; i <= this.observers.size() - 1; i++) {
+            Observer o = observers.get(i);
+            o.update(this.temperature, this.humidity, this.pressure);
         }
     }
 
@@ -44,13 +46,13 @@ public class WeatherData implements Subject {
     }
 
     public void measurementsChanged() {
-        this.notifyObserver()
+        this.notifyObserver();
     }
 
     public void setMeasurements(float temperature, float humidity, float pressure) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.pressure = pressure;
-        measurementsChanged();
+        this.measurementsChanged();
     }
 }

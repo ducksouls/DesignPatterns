@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GrepConsole">
+    <option name="pinnedGrepConsolesState">
+      <PinnedGrepConsolesState>
+        <option name="map">
+          <map>
+            <entry>
+              <key>
+                <RunConfigurationRef>
+                  <option name="icon" value="application.svg" />
+                  <option name="name" value="TestInputStream" />
+                </RunConfigurationRef>
+              </key>
+              <value>
+                <Pins>
+                  <option name="pins">
+                    <list>
+                      <Pin>
+                        <option name="consoleUUID" value="349869df-db0c-49d3-8c7f-ef53ba05694e" />
+                        <option name="contentType" value="ConsoleContent" />
+                        <option name="grepModel">
+                          <GrepModel>
+                            <option name="expression" value="&quot;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Lai\java\DesignPattern\DesignPatterns\out\p" />
+                            <option name="unlessExpression" value="" />
+                          </GrepModel>
+                        </option>
+                      </Pin>
+                    </list>
+                  </option>
+                </Pins>
+              </value>
+            </entry>
+          </map>
+        </option>
+      </PinnedGrepConsolesState>
+    </option>
+  </component>
+</project>
