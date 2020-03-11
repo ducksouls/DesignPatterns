@@ -1,7 +1,7 @@
 package cn.lai.designpatterns.observers;
 
 /**
- * 显示当前数值
+ * 显示当前数值,是一个"关心"天气数据的观察者
  */
 public class CurrentConditionsDisplay implements DisplayElement, Observer {
     private float temperature;
@@ -10,6 +10,7 @@ public class CurrentConditionsDisplay implements DisplayElement, Observer {
 
     CurrentConditionsDisplay(Subject s) {
         this.weatherData = s;
+        //注册主题
         this.weatherData.registerObserver(this);
     }
 

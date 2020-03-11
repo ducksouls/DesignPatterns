@@ -2,6 +2,9 @@ package cn.lai.designpatterns.observers;
 
 import java.util.ArrayList;
 
+/**
+ * 具体的主题
+ */
 public class WeatherData implements Subject {
 
     private ArrayList<Observer> observers;

@@ -3,7 +3,8 @@ package cn.lai.designpatterns.decorator;
 public class Decaf extends Beverage {
 
     public Decaf() {
-        description = "我是一杯decaf。。。";//这是继承自Beverage
+        //这是继承自Beverage
+        description = "我是一杯decaf。。。";
     }
 
     @Override

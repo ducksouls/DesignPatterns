@@ -1,7 +1,7 @@
 package cn.lai.designpatterns.decorator;
 
 /**
- * 饮料的超类
+ * 饮料的超类,Component
  */
 public abstract class Beverage {
     String description = "未知";

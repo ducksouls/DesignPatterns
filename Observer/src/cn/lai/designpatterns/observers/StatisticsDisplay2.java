@@ -1,20 +1,22 @@
 package cn.lai.designpatterns.observers;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Observable;
+import java.util.Observer;
 
 /***
  * 统计最大最小值
  */
-public class StatisticsDisplay implements DisplayElement, Observer {
-    private WeatherData wd;
+public class StatisticsDisplay2 implements DisplayElement, Observer {
+    private Observable wd;
     private ArrayList<Float> temperature = new ArrayList<>();
     private ArrayList<Float> humidity = new ArrayList<>();
     private ArrayList<Float> pressure = new ArrayList<>();
 
-    public StatisticsDisplay(WeatherData wd) {
-        wd.registerObserver(this);
+    public StatisticsDisplay2(Observable wd) {
+        this.wd = wd;
+        wd.addObserver(this);
     }
 
 
@@ -29,11 +31,14 @@ public class StatisticsDisplay implements DisplayElement, Observer {
         }
     }
 
+
     @Override
-    public void update(float temperature, float humidity, float pressure) {
-        this.temperature.add(temperature);
-        this.humidity.add(humidity);
-        this.pressure.add(pressure);
+    public void update(Observable o, Object arg) {
+        if (o instanceof WeatherData2) {
+            this.temperature.add(((WeatherData2) o).getTemperature());
+            this.humidity.add(((WeatherData2) o).getHumidity());
+            this.pressure.add(((WeatherData2) o).getPressure());
         display();
+        }
     }
 }
