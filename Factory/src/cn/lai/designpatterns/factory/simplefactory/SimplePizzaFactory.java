@@ -7,10 +7,12 @@ import cn.lai.designpatterns.factory.Pizza;
 public class SimplePizzaFactory {
     public static Pizza createPizza(String type) {
         Pizza pizza = null;
-        if (type.equals("cheese"))
+        if (type.equals("cheese")) {
             pizza = new CheesePizza();
-        if (type.equals("peperoni"))
+        }
+        if (type.equals("peperoni")) {
             pizza = new PeperoniPizza();
+        }
         return pizza;
     }
 }
