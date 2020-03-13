@@ -18,10 +18,17 @@ public class RemoteLoader {
 //        RemoteControl rc = new RemoteControl(); // invoker
         RemoteControlWithUndo rc = new RemoteControlWithUndo();
         rc.setCommand(0, lightOnCommand, lightOffCommand);
-        rc.onPressed(0);
-        rc.offPressed(0);
-        rc.undoPressed();
-        rc.undoPressed();
+        rc.onAndOffButtonPressed(0);
+        rc.onAndOffButtonPressed(0);
+        rc.onAndOffButtonPressed(0);
+        rc.onAndOffButtonPressed(0);
+//        rc.onPressed(0);
+        System.out.println("---------");
+//        rc.offPressed(0);
+
+
+//        rc.undoPressed();
+//        rc.undoPressed();
 
         rc.onPressed(1);
         rc.offPressed(1);

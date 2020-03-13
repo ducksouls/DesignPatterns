@@ -15,6 +15,8 @@ public class Test {
 
         remote.setCommand(lightOn);
         remote.buttonWasPressed();
+        remote.undo();
+        remote.buttonWasPressed();
         remote.setCommand(doorOpen);
         remote.buttonWasPressed();
 

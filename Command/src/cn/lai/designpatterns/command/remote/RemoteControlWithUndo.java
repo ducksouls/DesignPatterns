@@ -9,6 +9,7 @@ public class RemoteControlWithUndo {
     Command[] onCommand;
     Command[] offCommand;
     Command undoCommand;
+    boolean isPressd = false;
 
     RemoteControlWithUndo() {
         onCommand = new Command[7];
@@ -24,6 +25,17 @@ public class RemoteControlWithUndo {
     void setCommand(int slot, Command onCommand, Command offCommand) {
         this.onCommand[slot] = onCommand;
         this.offCommand[slot] = offCommand;
+    }
+
+    void onAndOffButtonPressed(int slot) {
+        if(!isPressd) {
+            this.onCommand[slot].execute();
+            undoCommand = this.offCommand[slot];
+            isPressd = !isPressd;
+        } else {
+            undoCommand.execute();
+            isPressd = !isPressd;
+        }
     }
 
     void onPressed(int slot) {
