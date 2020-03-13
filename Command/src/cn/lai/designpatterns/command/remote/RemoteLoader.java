@@ -10,10 +10,13 @@ import cn.lai.designpatterns.command.LightOnCommand;
  */
 public class RemoteLoader {
     public static void main(String[] args) {
-        Light light = new Light(); // receiver
+        // receiver
+        Light light = new Light();
 
-        LightOffCommand lightOffCommand = new LightOffCommand(light); //concreteCommand
-        LightOnCommand lightOnCommand = new LightOnCommand(light); //concreteCommand
+        //concreteCommand
+        LightOffCommand lightOffCommand = new LightOffCommand(light);
+        //concreteCommand
+        LightOnCommand lightOnCommand = new LightOnCommand(light);
 
 //        RemoteControl rc = new RemoteControl(); // invoker
         RemoteControlWithUndo rc = new RemoteControlWithUndo();
@@ -22,13 +25,13 @@ public class RemoteLoader {
         rc.onAndOffButtonPressed(0);
         rc.onAndOffButtonPressed(0);
         rc.onAndOffButtonPressed(0);
+
 //        rc.onPressed(0);
+
         System.out.println("---------");
 //        rc.offPressed(0);
-
-
-//        rc.undoPressed();
-//        rc.undoPressed();
+        //rc.undoPressed();
+        //rc.undoPressed();
 
         rc.onPressed(1);
         rc.offPressed(1);

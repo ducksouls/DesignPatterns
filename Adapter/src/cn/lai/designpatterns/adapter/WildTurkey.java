@@ -1,5 +1,8 @@
 package cn.lai.designpatterns.adapter;
 
+/**
+ * 野生火鸡,现在,想让这个火鸡伪装成鸭子类型
+ */
 public class WildTurkey implements Turkey {
     @Override
     public void gobble() {
