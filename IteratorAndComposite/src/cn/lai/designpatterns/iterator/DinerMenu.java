@@ -11,13 +11,6 @@ public class DinerMenu implements Menu {
     int numberOfItem = 0;
     MenuItem[] menuItems;
 
-    @Override
-    public Iterator createIterator() {
-        return new DinerMenuIterator(menuItems)
-                ;
-
-    }
-
     public DinerMenu() {
         menuItems = new MenuItem[MAX_ITEMS];
         addItem("蛋炒饭", "蛋炒饭", false, 12.5);
@@ -25,6 +18,11 @@ public class DinerMenu implements Menu {
         addItem("炒生菜", "炒生菜", true, 10);
         addItem("牛杂汤", "牛杂汤", false, 45.5);
 
+    }
+
+    @Override
+    public Iterator createIterator() {
+        return new DinerMenuIterator(menuItems);
     }
 
     public void addItem(String name, String description, boolean vegetarian, double price) {

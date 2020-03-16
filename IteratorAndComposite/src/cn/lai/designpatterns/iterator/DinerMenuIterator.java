@@ -1,7 +1,7 @@
 package cn.lai.designpatterns.iterator;
 
 /**
- * @Description:
+ * @Description:迭代器的实现
  * @author: ZNXM-007
  * @date 2020/3/14 8:49
  */
